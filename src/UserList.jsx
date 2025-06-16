@@ -7,7 +7,7 @@ const UserList = () => {
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
-        setListUser(console.log(response.data));
+        setListUser(response.data);
       })
       .catch(error => {
         console.error('Erreur lors de la récupération des utilisateurs:', error);
